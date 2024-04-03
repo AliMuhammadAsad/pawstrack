@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="style_register.css">
+</head>
+<body>
+    <div class="rect">
+        <img src="PAWS.png" alt="Logo">
+    </div>
+
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="registerForm" action="register_process.php" method="post" onsubmit="return register()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Create Account">
+        </form>
+    </div>
+
+    <div class="bottom-rect">
+        <!-- Content for bottom rectangle -->
+    </div>
+
+    <script>
+        function register() {
+            // Perform your registration logic here
+            // For demonstration purposes, let's assume registration is successful
+
+            // Redirect to login page upon successful registration
+            window.location.href = "login.html";
+            
+            // Prevent form submission
+            return false;
+        }
+    </script>
+</body>
+</html>
