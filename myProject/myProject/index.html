@@ -7,6 +7,13 @@
     <link rel="stylesheet" type="text/css" href="style_index.css">
 </head>
 <body>
+    <div class="rect">
+        <img src="PAWS.png" alt="Logo">
+        <div class="top-buttons">
+            <button class="signup-button">Sign Up</button>
+            <button class="login-button">Login</button>
+        </div>
+    </div>
     <div class="container">
         <h2>Login</h2>
         <form id="loginForm" action="login_process.php" method="post" onsubmit="return login()">
@@ -15,7 +22,12 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Login">
+            <a href="forgot_password.html">Forgot password?</a>
         </form>
+    </div>
+
+    <div class="bottom-rect">
+        <!-- Content for bottom rectangle -->
     </div>
 
     <script>
