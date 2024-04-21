@@ -1,0 +1,75 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+<style>
+.container{
+    /* display:flex; */
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn {
+    background-color: #ba93b2;
+    margin-top: 5px;
+    width: 100%; /* Set the width to 100% */
+}
+</style>
+<div class="container">
+    <div class="col-md-12 map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.768557928327!2d67.13570127605868!3d24.905874977899703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33906ead1899d%3A0x3c0681e6f7d5dc14!2sHabib%20University!5e0!3m2!1sen!2s!4v1713596444081!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <h2>Get in Touch</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <form>
+                <div class="form-group">
+                    <textarea
+                        rows="10"
+                        class="form-control"
+                        placeholder="Enter your message"
+                        style="color: black;"
+                    ></textarea>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Enter Name"
+                                style="color: black;"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Email"
+                                style="color: black;"
+                            />
+                        </div>
+                    </div>
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Subject"
+                        style="color: black;"
+                    />
+                </div>
+                <button type="button" id="modify-btn" class="btn btn-link" style="color: white;">
+                    SEND
+                </button>
+            </form>
+        </div>
+        <div class="col-md-4" style="padding: 2.5rem;">
+            <div class="col-md-12 contact-details" style="color: black;">
+                <p class="font-weight-bold" style="margin-bottom: 0px;">
+                    <ion-icon name="home-outline"></ion-icon> Habib University
+                    <p >University Avenue, Block 18, Gulistan-e-Jauhar, Karachi</p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+{% endblock content %}
