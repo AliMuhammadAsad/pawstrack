@@ -18,4 +18,4 @@ class CreateUserForm(UserCreationForm):
 class ContactForm(ModelForm):
 	class Meta:
 		model = ContactMessage
-		fields = ['name', 'email', 'subject', 'message']
+		fields = ['name', 'email', 'subject', 'message', 'phone']
