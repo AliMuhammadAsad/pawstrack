@@ -27,3 +27,20 @@ class ContactMessage(models.Model):
 	
 	def get_absolute_url(self):
 		return reverse('message_detail', args=[str(self.id)])
+
+class Pet(models.Model):
+	name = models.CharField(max_length=200)
+	age = models.IntegerField()
+	animal_type = models.CharField(max_length=200)
+	description = models.TextField()
+	adopted = models.BooleanField(default=False)
+	medical_history = models.TextField()
+	treatment_history = models.TextField()
+	treatment_in_progress = models.BooleanField(default=False)
+	treatment_costs = models.DecimalField(max_digits=6, decimal_places=2)
+	picture = models.ImageField(upload_to='pets/', default='default.png', null=True, blank=True)
+	deceased = models.BooleanField(default=False)
+	date_created = models.DateTimeField(auto_now_add=True, null=True)
+
+	def __str__(self):
+		return self.name

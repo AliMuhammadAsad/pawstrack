@@ -5,3 +5,4 @@ from .models import *
 
 admin.site.register(Customer)
 admin.site.register(ContactMessage)
+admin.site.register(Pet)

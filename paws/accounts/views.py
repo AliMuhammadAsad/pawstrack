@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 
-from django.views.generic import DetailView, UpdateView, DeleteView
+from django.views.generic import *
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -114,3 +114,21 @@ class MessageUpdateView(UpdateView):
 class MessageDeleteView(DeleteView):
 	model = ContactMessage
 	success_url = reverse_lazy('messages')
+
+class PetListView(ListView):
+	model = Pet
+
+class PetDetailView(DetailView):
+	model = Pet
+
+class PetCreateView(CreateView):
+	model = Pet
+	fields = ['name', 'age', 'animal_type', 'description', 'adopted', 'medical_history', 'treatment_history', 'treatment_costs', 'treatment_in_progress', 'picture', 'deceased']
+
+class PetUpdateView(UpdateView):
+	model = Pet
+	fields = ['name', 'age', 'animal_type', 'description', 'adopted', 'medical_history', 'treatment_history', 'treatment_costs', 'treatment_in_progress', 'picture', 'deceased']
+
+class PetDeleteView(DeleteView):
+	model = Pet
+	success_url = reverse_lazy('pets')
