@@ -7,6 +7,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 
+from django.views.generic import DetailView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+
 # Create your views here.
 from .models import *
 from .forms import *
@@ -90,3 +93,24 @@ def contactUs(request):
 			return redirect('contact')
 	context = {'form': form}
 	return render(request, 'accounts/contact.html', context)
+
+# @allowed_users(allowed_roles=['*'])
+@login_required(login_url='login')
+# @admin_only
+def viewMessages(request):
+	messages = ContactMessage.objects.all()
+	context = {'messages': messages}
+	return render(request, 'accounts/messages.html', context)
+
+
+class MessageDetailView(DetailView):
+	model = ContactMessage
+
+class MessageUpdateView(UpdateView):
+	model = ContactMessage
+	template_name_suffix = '_update_form'
+	fields = ['name', 'email', 'phone', 'subject', 'message']
+
+class MessageDeleteView(DeleteView):
+	model = ContactMessage
+	success_url = reverse_lazy('messages')
