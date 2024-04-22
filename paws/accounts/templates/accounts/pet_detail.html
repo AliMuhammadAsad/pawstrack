@@ -1,7 +1,57 @@
 {% extends 'accounts/main.html' %}
 {% load static %}
 {% block content %}
-<h2>Details</h2>
-
-{% endblock content %}
+<style>
+#main-footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+.section-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    text-align: center;
+}
+.pet-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+</style>
+<div class="back-button">
+    <a href="{% url 'pet_list' %}"><i class="fas fa-arrow-left"></i> Back</a>
+</div>
+<div class="container">
+    <div class="section-container">
+        <h2>{{ pet.name }}</h2>
+        <img class="pet-image" src="{{ pet.picture.url }}" alt="{{ pet.name }}">
+        <p><strong>Type:</strong> {{ pet.animal_type }}</p>
+        <p><strong>Age:</strong> {{ pet.age }}</p>
+        <p><strong>Living Status:</strong> {% if pet.deceased %}Deceased {% else %} Alive {% endif %}</p>
+        <p><strong>Description:</strong> {{ pet.description }}</p>
+        <p><strong>Adoption Status:</strong> {{ pet.adopted }}</p>
+        <p><strong>Adoption History:</strong> {{ pet.adoption_history }}</p>
+        <p><strong>Medical History:</strong> {{ pet.medical_history }}</p>
+        <p><strong>Treatment History:</strong> {{ pet.treatment_history }}</p>
+        <p><strong>Treatment In Progress:</strong> {{ pet.treatment_in_progress }}</p>
+        <p><strong>Total Treatment Costs:</strong> {{ pet.treatment_costs }}</p>
+        <a href="{% url 'pet_update' pet.id %}"><i class="fas fa-edit text-primary"></i></a>
+        <a href="{% url 'pet_delete' pet.id %}"><i class="fas fa-trash-alt text-danger"></i></a>
+    </div>
+</div>
+{% endblock %}
 {% include 'accounts/footer.html' %}

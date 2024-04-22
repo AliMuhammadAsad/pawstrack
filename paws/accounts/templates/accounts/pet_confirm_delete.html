@@ -1,7 +1,38 @@
 {% extends 'accounts/main.html' %}
 {% load static %}
 {% block content %}
-<h2>Delete</h2>
+<style>
+#main-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
-{% endblock content %}
+.cancel_button {
+  color: black;
+  text-decoration: none;
+  background-color: whitesmoke;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.submit_button {
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.submit_button:hover {
+  color:red;
+}
+
+</style>
+<h2>Delete Pet</h2>
+<p>Are you sure you want to delete {{ pet.name }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="submit_button">Yes, delete</button>
+    <a class="cancel_button" href="{% url 'pet_list' %}">Cancel</a>
+</form>
+{% endblock %}
 {% include 'accounts/footer.html' %}

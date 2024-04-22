@@ -117,9 +117,15 @@ class PetCreateView(CreateView):
 	model = Pet
 	fields = '__all__'
 
+	def get_success_url(self):
+		return reverse_lazy('pet_list')
+
 class PetUpdateView(UpdateView):
 	model = Pet
 	fields = '__all__'
+
+	def get_success_url(self):
+		return reverse_lazy('pet_list')
 
 class PetDeleteView(DeleteView):
 	model = Pet

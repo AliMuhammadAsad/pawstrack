@@ -29,16 +29,17 @@ class ContactMessage(models.Model):
 		return reverse('message_detail', args=[str(self.id)])
 
 class Pet(models.Model):
+	picture = models.ImageField(upload_to='pets/', default='default.png')
 	name = models.CharField(max_length=200)
 	age = models.IntegerField()
 	animal_type = models.CharField(max_length=200)
 	description = models.TextField()
 	adopted = models.BooleanField(default=False)
-	medical_history = models.TextField()
-	treatment_history = models.TextField()
+	adoption_history = models.TextField(default='Never Adopted')
+	medical_history = models.TextField(default='No Medical History')
+	treatment_history = models.TextField(default='No Treatment History')
 	treatment_in_progress = models.BooleanField(default=False)
-	treatment_costs = models.DecimalField(max_digits=6, decimal_places=2)
-	picture = models.ImageField(upload_to='pets/', default='default.png', null=True, blank=True)
+	treatment_costs = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
 	deceased = models.BooleanField(default=False)
 	date_created = models.DateTimeField(auto_now_add=True, null=True)
 
