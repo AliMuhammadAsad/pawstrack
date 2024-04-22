@@ -94,22 +94,14 @@ def contactUs(request):
 	context = {'form': form}
 	return render(request, 'accounts/contact.html', context)
 
-# @allowed_users(allowed_roles=['*'])
 @login_required(login_url='login')
-# @admin_only
 def viewMessages(request):
 	messages = ContactMessage.objects.all()
 	context = {'messages': messages}
 	return render(request, 'accounts/messages.html', context)
 
-
 class MessageDetailView(DetailView):
 	model = ContactMessage
-
-class MessageUpdateView(UpdateView):
-	model = ContactMessage
-	template_name_suffix = '_update_form'
-	fields = ['name', 'email', 'phone', 'subject', 'message']
 
 class MessageDeleteView(DeleteView):
 	model = ContactMessage
@@ -123,12 +115,12 @@ class PetDetailView(DetailView):
 
 class PetCreateView(CreateView):
 	model = Pet
-	fields = ['name', 'age', 'animal_type', 'description', 'adopted', 'medical_history', 'treatment_history', 'treatment_costs', 'treatment_in_progress', 'picture', 'deceased']
+	fields = '__all__'
 
 class PetUpdateView(UpdateView):
 	model = Pet
-	fields = ['name', 'age', 'animal_type', 'description', 'adopted', 'medical_history', 'treatment_history', 'treatment_costs', 'treatment_in_progress', 'picture', 'deceased']
+	fields = '__all__'
 
 class PetDeleteView(DeleteView):
 	model = Pet
-	success_url = reverse_lazy('pets')
+	success_url = '/pets/'

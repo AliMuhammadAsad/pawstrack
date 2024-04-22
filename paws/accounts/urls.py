@@ -16,6 +16,11 @@ urlpatterns = [
 
     path('messages/', views.viewMessages, name='messages'),
     path('message/<int:pk>/', MessageDetailView.as_view(), name='message_detail'),
-    path('message/<int:pk>/update/', MessageUpdateView.as_view(), name='message_update'),
-    path('message/<int:pk>/delete/', MessageDeleteView.as_view(), name='message_delete')
+    path('message/<int:pk>/delete/', MessageDeleteView.as_view(), name='message_delete'),
+
+    path('pets/', PetListView.as_view(), name='pet_list'),
+    path('pets/<int:pk>/', PetDetailView.as_view(), name='pet_detail'),
+    path('pets/new/', PetCreateView.as_view(), name='pet_create'),
+    path('pets/<int:pk>/update/', PetUpdateView.as_view(), name='pet_update'),
+    path('pets/<int:pk>/delete/', PetDeleteView.as_view(), name='pet_delete'),
 ]

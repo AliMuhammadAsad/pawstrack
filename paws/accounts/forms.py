@@ -19,3 +19,8 @@ class ContactForm(ModelForm):
 	class Meta:
 		model = ContactMessage
 		fields = ['name', 'email', 'subject', 'message', 'phone']
+
+# class PetForm(ModelForm):
+# 	class Meta:
+# 		model = Pet
+# 		fields = '__all__'

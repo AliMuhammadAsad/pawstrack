@@ -1,0 +1,29 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<!-- <div class="container">
+    <h1>Pets To Be Listed Here</h1>
+</div> -->
+<h2>Pets</h2>
+  <a href="{% url 'pet_create' %}">Add Pet +</a>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Animal Type</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+    {% for pet in pet_list %}
+    <tr>
+      <td><a href="{% url 'pet_detail' pet.id %}">{{ pet.name }}</a></td>
+      <td>{{ pet.animal_type }}</td>
+      <td>{{ pet.description }}</td>
+      <td>
+        <a href="{% url 'pet_update' pet.id %}">Update</a>
+        <a href="{% url 'pet_delete' pet.id %}">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock content %}
+{% include 'accounts/footer.html' %}
