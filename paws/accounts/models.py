@@ -35,6 +35,7 @@ class Pet(models.Model):
 	animal_type = models.CharField(max_length=200)
 	description = models.TextField()
 	adopted = models.BooleanField(default=False)
+	up_for_adoption = models.BooleanField(default=False)
 	adoption_history = models.TextField(default='Never Adopted')
 	medical_history = models.TextField(default='No Medical History')
 	treatment_history = models.TextField(default='No Treatment History')
