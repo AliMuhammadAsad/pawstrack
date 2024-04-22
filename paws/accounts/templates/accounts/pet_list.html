@@ -77,7 +77,9 @@ table tr:nth-child(even) {
     <div class="section-container">
         <div class="cont-add">
         <h2>Pets</h2>
-            <a href="{% url 'pet_create' %}" class="btn">Add Pet +</a>
+        {% if request.user.is_staff %}
+        <a href="{% url 'pet_create' %}" class="btn">Add Pet +</a>
+        {% endif %}
         </div>
         <table>
             <tr>
@@ -89,7 +91,9 @@ table tr:nth-child(even) {
                 <th>Up for Adoption</th>
                 <th>Medical History</th>
                 <th>Deceased</th>
+                {% if request.user.is_staff %}
                 <th>Actions</th>
+                {% endif %}
             </tr>
             {% for pet in pet_list %}
             <tr>
@@ -101,10 +105,12 @@ table tr:nth-child(even) {
                 <td>{{ pet.up_for_adoption }}</td>
                 <td>{{ pet.medical_history }}</td>
                 <td>{{ pet.deceased }}</td>
+                {% if request.user.is_staff %}
                 <td style="align-items: center;">
                     <a href="{% url 'pet_update' pet.id %}"><i class="fas fa-edit text-primary"></i></a>
                     <a href="{% url 'pet_delete' pet.id %}"><i class="fas fa-trash-alt delete-icon" style="color:red;"></i></a>
                 </td>
+                {% endif %}
             </tr>
             {% endfor %}
         </table>

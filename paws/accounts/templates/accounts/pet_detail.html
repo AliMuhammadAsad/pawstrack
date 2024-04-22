@@ -15,7 +15,7 @@
     margin: 0 auto;
     width: 100%;
     padding: 20px;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 10px;
 }
 .section-container {
@@ -30,6 +30,11 @@
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+}
+.icons {
+    font-size: 30px;
+    padding: 5px;
+    margin-top: 20px;
 }
 </style>
 <div class="back-button">
@@ -49,8 +54,12 @@
         <p><strong>Treatment History:</strong> {{ pet.treatment_history }}</p>
         <p><strong>Treatment In Progress:</strong> {{ pet.treatment_in_progress }}</p>
         <p><strong>Total Treatment Costs:</strong> {{ pet.treatment_costs }}</p>
-        <a href="{% url 'pet_update' pet.id %}"><i class="fas fa-edit text-primary"></i></a>
-        <a href="{% url 'pet_delete' pet.id %}"><i class="fas fa-trash-alt text-danger"></i></a>
+        {% if request.user.is_staff %}
+        <div class="icons">
+            <a href="{% url 'pet_update' pet.id %}"><i class="fas fa-edit text-primary"></i></a>
+            <a href="{% url 'pet_delete' pet.id %}"><i class="fas fa-trash-alt text-danger"></i></a>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
