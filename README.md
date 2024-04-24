@@ -7,6 +7,16 @@ The project aims to develop a record management system, not only for the shelter
 - [Drive Link](https://drive.google.com/drive/folders/1U75j3uAwPmPagNRowCkgxa-T3ujPLKAr): contains temp and tentative document files, accessible only to contributors 
 - [Azure DevOps](https://dev.azure.com/pawstrack/PAWStrack/): contains project management and development files
 
+### Running the Project:
+
+#### Install the requirements:
+
+```pip install -r requirements.txt```
+
+#### Run the server:
+1. Navigate to the project directory: ```cd paws```
+2. Run the server: ```python manage.py runserver```
+
 ---
 ### Project Status: Sprint Cycle 2
 
