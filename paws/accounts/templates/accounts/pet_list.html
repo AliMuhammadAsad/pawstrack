@@ -101,10 +101,10 @@ table tr:nth-child(even) {
                 <td><a href="{% url 'pet_detail' pet.id %}">{{ pet.name }}</a></td>
                 <td>{{ pet.animal_type }}</td>
                 <td>{{ pet.description }}</td>
-                <td>{{ pet.adopted }}</td>
-                <td>{{ pet.up_for_adoption }}</td>
+                <td>{% if pet.adopted %} Yes {%else%} No {%endif%}</td>
+                <td>{% if pet.up_for_adoption %} Yes {%else%} No {%endif%}</td>
                 <td>{{ pet.medical_history }}</td>
-                <td>{{ pet.deceased }}</td>
+                <td>{% if pet.deceased %} Yes {%else%} No {%endif%}</td>
                 {% if request.user.is_staff %}
                 <td style="align-items: center;">
                     <a href="{% url 'pet_update' pet.id %}"><i class="fas fa-edit text-primary"></i></a>

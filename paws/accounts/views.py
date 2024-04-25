@@ -95,6 +95,7 @@ def contactUs(request):
 	return render(request, 'accounts/contact.html', context)
 
 @login_required(login_url='login')
+@admin_only
 def viewMessages(request):
 	messages = ContactMessage.objects.all()
 	context = {'messages': messages}
