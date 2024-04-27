@@ -54,33 +54,5 @@
         </form>
     </div>
 </div>
-<!-- <div class="container">
-    <div class="section-container">
-        <h2>{% if form.instance.pk %}Update {% else %}Add {% endif %}Pet</h2>
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="form-group">
-                {{ form.name.label_tag }} {{ form.name }}
-                {{ form.age.label_tag }} {{ form.age }}
-                {{ form.animal_type.label_tag }} {{ form.animal_type }}
-            </div>
-            <div class="form-group">
-                {{ form.description.label_tag }} {{ form.description }}
-                {{ form.picture.label_tag }} {{ form.picture }}
-            </div>
-            <div class="form-group">
-                {{ form.adopted.label_tag }} {{ form.adopted }}
-            </div>
-            <div class="form-group">
-                {{ form.medical_history.label_tag }} {{ form.medical_history }}
-                {{ form.treatment_history.label_tag }} {{ form.treatment_history }}
-                {{ form.treatment_in_progress.label_tag }} {{ form.treatment_in_progress }}
-                {{ form.treatment_costs.label_tag }} {{ form.treatment_costs }}
-            </div>
-            <button type="submit" class="submit_button">Save</button>
-            <a class="cancel_button" href="{% url 'pet_list' %}">Cancel</a>
-        </form>
-    </div>
-</div> -->
 {% endblock %}
 {% include 'accounts/footer.html' %}
