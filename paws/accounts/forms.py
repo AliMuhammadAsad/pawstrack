@@ -1,7 +1,6 @@
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User 
-
 from .models import * 
 
 class CustomerForm(ModelForm):
@@ -19,8 +18,3 @@ class ContactForm(ModelForm):
 	class Meta:
 		model = ContactMessage
 		fields = ['name', 'email', 'subject', 'message', 'phone']
-
-# class PetForm(ModelForm):
-# 	class Meta:
-# 		model = Pet
-# 		fields = '__all__'

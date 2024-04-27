@@ -6,11 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
-
 from django.views.generic import *
 from django.urls import reverse_lazy
-
-# Create your views here.
 from .models import *
 from .forms import *
 from .decorators import unauthenticated_user, allowed_users, admin_only
@@ -22,13 +19,10 @@ def registerPage(request):
 		form = CreateUserForm(request.POST)
 		if form.is_valid():
 			user = form.save()
-			username = form.cleaned_data.get('username')
-			
+			username = form.cleaned_data.get('username')			
 			messages.success(request, 'Account was created for '+ username)
 			return redirect('login')
-
 	context = {'form': form}
-
 	return render(request, 'accounts/register.html', context)
 
 @unauthenticated_user
@@ -36,15 +30,11 @@ def loginPage(request):
 	if request.method == 'POST':
 		username = request.POST.get('username')
 		password = request.POST.get('password')
-
 		user = authenticate(request, username=username, password=password)
-
 		if user is not None:
 			login(request, user)
 			return redirect('home')
-		else:
-			messages.info(request, 'Username or Password is incorrect!')
-
+		else: messages.info(request, 'Username or Password is incorrect!')
 	context = {}
 	return render(request, 'accounts/login.html', context)
 
@@ -67,12 +57,9 @@ def userPage(request):
 def accountSettings(request):
 	customer = request.user.customer
 	form = CustomerForm(instance=customer)
-
 	if request.method == 'POST':
 		form = CustomerForm(request.POST, request.FILES, instance=customer)
-		if form.is_valid():
-			form.save()
-			
+		if form.is_valid(): form.save()
 	context = {'form': form} 
 	return render(request, 'accounts/account_settings.html', context)
 

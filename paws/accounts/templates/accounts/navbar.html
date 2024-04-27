@@ -9,7 +9,6 @@
   .navbar {
     width: 100%;
     height: 70px;
-    /* border-radius: 0 0 10px 10px; */
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -17,7 +16,6 @@
     font-size: 20px;
     padding: 0 30px;
   }
-
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -32,7 +30,7 @@
 
         {% if request.user.is_staff %}
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Dashboard</a>w
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Dashboard</a>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'messages' %}">UserMessages</a>
           </li>
