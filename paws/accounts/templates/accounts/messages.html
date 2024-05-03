@@ -2,50 +2,47 @@
 {% load static %}
 {% block content %}
 <style>
-    /* #main-footer{
-        position: relative;
-    } */
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .container{
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-        width: 100%; 
-        padding: 10px;
-        margin-top: 100px;
-        margin-bottom: 10px;
-    }
-    .section-container {
-        width: 100%;
-        padding: 10px;
-        background-color: #f8f9fa;
-        border-radius: 15px;
-    }
-    
-    .delete-icon {
-        font-size: 24px;
-        text-align: center;
-        display: block;
-        color: red;
-    }
-    table {
-        width: 100%; 
-        max-width: 100%;
-        border-collapse: collapse;
-    }
-    table, th, td {
-        border: 2px solid #ddd;
-        padding: 15px;
-        word-wrap: break-word; 
-        overflow-wrap: break-word;
-    }
-    table tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+body {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%; 
+    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.section-container {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+}
+.delete-icon {
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    color: red;
+}
+table {
+    width: 100%; 
+    max-width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+table, th, td {
+    border: 2px solid #ddd;
+    padding: 15px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    border: none;
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 </style>
     <div class="container">
         <div class="section-container">
