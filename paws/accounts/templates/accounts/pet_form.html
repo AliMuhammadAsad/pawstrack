@@ -1,7 +1,7 @@
 {% extends 'accounts/main.html' %}
 {% load static %}
 {% block content %}
-<style>
+<!-- <style>
 #main-footer{
     position: relative;
     bottom: 0;
@@ -53,6 +53,165 @@
             <a class="cancel_button" href="{% url 'pet_list' %}">Cancel</a>
         </form>
     </div>
+<<<<<<< Updated upstream
 </div>
+=======
+</div> -->
+
+<style>
+    #main-footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+        margin-top: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .section-container {
+        width: 100%;
+        max-width: 600px; /* Adjust the max-width as needed */
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .pet-image-container {
+    display: flex;
+    justify-content: center;
+    }
+    .pet-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+    .back-button {
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    
+    .cancel_button, .submit_button {
+        color: black;
+        text-decoration: none;
+        background-color: #ededed;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .cancel_button:hover, .submit_button:hover {
+        background-color: #dcdcdc;
+    }
+    
+    .submit_button {
+        background-color: #5cb85c;
+        color: white;
+    }
+    
+    .submit_button:hover {
+        background-color: #4cae4c;
+    }
+
+    form table {
+        width: 100%;
+    }
+
+    form table td {
+        text-align: left;
+        padding: 5px 10px;
+    }    
+    </style>
+    <div class="back-button">
+        <a href="{% url 'pet_list' %}" class="cancel_button"><i class="fas fa-arrow-left"></i> Back</a>
+    </div>
+    <div class="container">
+        <div class="section-container">
+            <h2>{% if form.instance.pk %}Update {% else %}Add {% endif %} Pet</h2>
+            <h2>{{ pet.name }}</h2>
+            <div class="pet-image-container">
+                <img class="pet-image" src="{{ pet.picture.url }}" alt="{{ pet.name }}">
+            </div>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="form-table">
+                    <tr>
+                        <td><label for="id_picture">Change Picture:</label></td>
+                        <td><input type="file" id="id_picture" name="picture"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_name">Name:</label></td>
+                        <td><input type="text" id="id_name" name="name" value="{{ pet.name }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_age">Age:</label></td>
+                        <td><input type="number" id="id_age" name="age" value="{{ pet.age }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_animal_type">Animal Type:</label></td>
+                        <td><input type="text" id="id_animal_type" name="animal_type" value="{{ pet.animal_type }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_description">Description:</label></td>
+                        <td><textarea id="id_description" name="description">{{ pet.description }}</textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_adopted">Adopted:</label></td>
+                        <td><input type="checkbox" id="id_adopted" name="adopted" {% if pet.adopted %}checked{% endif %}></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_adoption_history">Adoption History:</label></td>
+                        <td><textarea id="id_adoption_history" name="adoption_history">{{ pet.adoption_history }}</textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_medical_history">Medical History:</label></td>
+                        <td><textarea id="id_medical_history" name="medical_history">{{ pet.medical_history }}</textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_treatment_history">Treatment History:</label></td>
+                        <td><textarea id="id_treatment_history" name="treatment_history">{{ pet.treatment_history }}</textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_treatment_in_progress">Treatment In Progress:</label></td>
+                        <td><input type="checkbox" id="id_treatment_in_progress" name="treatment_in_progress" {% if pet.treatment_in_progress %}checked{% endif %}></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_treatment_costs">Total Treatment Costs:</label></td>
+                        <td><input type="number" id="id_treatment_costs" name="treatment_costs" value="{{ pet.treatment_costs }}"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="id_deceased">Deceased:</label></td>
+                        <td><input type="checkbox" id="id_deceased" name="deceased" {% if pet.deceased %}checked{% endif %}></td>
+                    </tr>
+                </table>
+                <button type="submit" class="submit_button">Save</button>
+                <a class="cancel_button" href="{% url 'pet_list' %}">Cancel</a>
+            </form>
+        </div>
+    </div>
+    
+
+>>>>>>> Stashed changes
 {% endblock %}
 {% include 'accounts/footer.html' %}

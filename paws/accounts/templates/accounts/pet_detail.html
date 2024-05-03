@@ -19,22 +19,36 @@
     margin-bottom: 10px;
 }
 .section-container {
-    width: 100%;
+    /* width: 100%;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 15px;
-    text-align: center;
+    text-align: center; */
+    width: 80%; /* Set maximum width for the section */
+    max-width: 600px; /* Adjust this value as needed */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    text-align: left; /* Align text to left */
+    margin-top: 20px; /* Adjust top margin as needed */
 }
 .pet-image {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 .icons {
     font-size: 30px;
     padding: 5px;
     margin-top: 20px;
+}
+.details-table {
+    width: 100%;
+}
+.details-table td {
+    padding: 5px;
 }
 </style>
 <div class="back-button">
@@ -42,9 +56,11 @@
 </div>
 <div class="container">
     <div class="section-container">
+        <div style="text-align: center;"> 
         <h2>{{ pet.name }}</h2>
         <img class="pet-image" src="{{ pet.picture.url }}" alt="{{ pet.name }}">
-        <p><strong>Type:</strong> {{ pet.animal_type }}</p>
+        </div>
+        <!-- <p><strong>Type:</strong> {{ pet.animal_type }}</p>
         <p><strong>Age:</strong> {{ pet.age }}</p>
         <p><strong>Living Status:</strong> {% if pet.deceased %}Deceased {% else %} Alive {% endif %}</p>
         <p><strong>Description:</strong> {{ pet.description }}</p>
@@ -54,7 +70,49 @@
         <p><strong>Treatment History:</strong> {{ pet.treatment_history }}</p>
         <p><strong>Treatment In Progress:</strong> {{ pet.treatment_in_progress }}</p>
         <p><strong>Total Treatment Costs:</strong> {{ pet.treatment_costs }}</p>
-        {% if request.user.is_staff %}
+        {% if request.user.is_staff %} -->
+        <table class="details-table">
+            <tr>
+                <td><strong>Type:</strong></td>
+                <td>{{ pet.animal_type }}</td>
+            </tr>
+            <tr>
+                <td><strong>Age:</strong></td>
+                <td>{{ pet.age }}</td>
+            </tr>
+            <tr>
+                <td><strong>Living Status:</strong></td>
+                <td>{% if pet.deceased %}Deceased{% else %}Alive{% endif %}</td>
+            </tr>
+            <tr>
+                <td><strong>Description:</strong></td>
+                <td>{{ pet.description }}</td>
+            </tr>
+            <tr>
+                <td><strong>Adoption Status:</strong></td>
+                <td>{{ pet.adopted }}</td>
+            </tr>
+            <tr>
+                <td><strong>Adoption History:</strong></td>
+                <td>{{ pet.adoption_history }}</td>
+            </tr>
+            <tr>
+                <td><strong>Medical History:</strong></td>
+                <td>{{ pet.medical_history }}</td>
+            </tr>
+            <tr>
+                <td><strong>Treatment History:</strong></td>
+                <td>{{ pet.treatment_history }}</td>
+            </tr>
+            <tr>
+                <td><strong>Treatment In Progress:</strong></td>
+                <td>{{ pet.treatment_in_progress }}</td>
+            </tr>
+            <tr>
+                <td><strong>Total Treatment Costs:</strong></td>
+                <td>{{ pet.treatment_costs }}</td>
+            </tr>
+        </table>
         <div class="icons">
             <a href="{% url 'pet_update' pet.id %}"><i class="fas fa-edit text-primary"></i></a>
             <a href="{% url 'pet_delete' pet.id %}"><i class="fas fa-trash-alt text-danger"></i></a>
