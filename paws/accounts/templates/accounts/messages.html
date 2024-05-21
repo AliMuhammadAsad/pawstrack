@@ -57,7 +57,7 @@ table tr:nth-child(even) {
                     <th>Message</th>
                     <th>Actions</th>
                 </tr>
-                {% for message in messages %}
+                {% for message in messages reversed %}
                 <tr>
                     <td>{{ message.date_created }}</td>
                     <td>{{ message.name }}</td>

@@ -106,10 +106,12 @@
                 <td>{{ pet.treatment_costs }}</td>
             </tr>
         </table>
+        {% if request.user.is_staff %}
         <div class="icons">
             <a href="{% url 'pet_update' pet.id %}"><i class="fas fa-edit text-primary"></i></a>
             <a href="{% url 'pet_delete' pet.id %}"><i class="fas fa-trash-alt text-danger"></i></a>
         </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
