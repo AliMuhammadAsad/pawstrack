@@ -6,6 +6,7 @@ The project aims to develop a record management system, not only for the shelter
 ### Work Files:
 - [Drive Link](https://drive.google.com/drive/folders/1U75j3uAwPmPagNRowCkgxa-T3ujPLKAr): contains temp and tentative document files, accessible only to contributors 
 - [Azure DevOps](https://dev.azure.com/pawstrack/PAWStrack/): contains project management and development files
+- [Project Demo Video](https://drive.google.com/file/d/1XBkgn8D6WgdeIBz0v0awaijdIjQSqBVn/view?usp=sharing)
 
 ### Running the Project:
 
