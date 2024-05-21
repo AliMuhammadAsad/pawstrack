@@ -1,0 +1,326 @@
+\section{Test Plan}
+
+% \begin{enumerate}
+%     \item \textbf{}
+%     \begin{itemize}
+%         \item \textbf{Test Case 1:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 2:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 3:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%     \end{itemize}
+%     \item \textbf{}
+%     \begin{itemize}
+%         \item \textbf{Test Case 4:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%     \end{itemize}
+%     \item \textbf{}
+%     \begin{itemize}
+%         \item \textbf{Test Case 5:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 6:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 7:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 8:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 9:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%     \end{itemize}
+%     \item \textbf{}
+%         \begin{itemize}
+%         \item \textbf{Test Case 10:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 11:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 12:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%     \end{itemize}
+%     \item \textbf{}
+%         \begin{itemize}
+%         \item \textbf{Test Case 13:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 14:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%         \item \textbf{Test Case 15:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%     \end{itemize}
+%     \item \textbf{}
+%         \begin{itemize}
+%         \item \textbf{Test Case 16:}
+%         \begin{itemize}
+%             \item \textbf{Steps:}
+%             \begin{enumerate}
+%                 \item
+%             \end{enumerate}
+%             \item \textbf{Expected Result:}
+%         \end{itemize}
+%     \end{itemize}
+% \end{enumerate}
+
+\begin{enumerate}
+    \item \textbf{Admin Registration and Login:}
+    \begin{itemize}
+        \item \textbf{Test Case 1:} Test admin registration with valid credentials.
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Navigate to the registration page (register).
+                \item Fill out the registration form with valid admin credentials.
+                \item Submit the form.
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin account should be created successfully, and the user should be redirected to the login page (login).
+        \end{itemize}
+        \item \textbf{Test Case 2:} Test admin login with registered credentials.
+
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Navigate to the login page (login).
+                \item Enter the registered admin username and password.
+                \item Submit the login form.
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin should be logged in successfully and redirected to the admin home page (home).
+        \end{itemize}
+        \item \textbf{Test Case 3:} Test admin login with invalid credentials (incorrect username/password).
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Navigate to the login page (login).
+                \item Enter incorrect admin username and/or password.
+                \item Submit the login form.
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin should not be able to log in, and an appropriate error message should be displayed.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Admin Home Page:}
+    \begin{itemize}
+        \item \textbf{Test Case 4:} Test whether admin users are redirected to the correct home page after logging in.
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Verify the URL or page content to ensure redirection to the admin home page (home).
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin user should be redirected to the admin home page after successful login.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Viewing and Managing Pets:}
+    \begin{itemize}
+        \item \textbf{Test Case 5:} Test if admin users can view a list of pets (pet\_list).
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the pets list page (pet\_list).
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin should be able to view a list of pets.
+        \end{itemize}
+        \item \textbf{Test Case 6:} Test if admin users can view details of a specific pet (pet\_detail).
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the details page of a specific pet (pet\_detail).
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin should be able to view detailed information about the selected pet.
+        \end{itemize}
+        \item \textbf{Test Case 7:} Test adding a new pet (pet\_create).
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the page for adding a new pet (pet\_create).
+                \item Fill out the pet creation form with valid information.
+                \item Submit the form.
+            \end{enumerate}
+            \item \textbf{Expected Result:} A new pet should be added to the database, and the admin should be redirected to the pet list page (pet\_list).
+        \end{itemize}
+        \item \textbf{Test Case 8:} Test updating an existing pet's information (pet\_update).
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the edit page of an existing pet (pet\_update).
+                \item Modify the pet's information.
+                \item Submit the form.
+            \end{enumerate}
+            \item \textbf{Expected Result:} The pet's information should be updated in the database, and the admin should be redirected to the pet list page (pet\_list).
+        \end{itemize}
+        \item \textbf{Test Case 9:} Test deleting a pet record (pet\_delete)
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the delete page of an existing pet (pet\_delete).
+                \item Confirm the deletion.
+            \end{enumerate}
+            \item \textbf{Expected Result:} The selected pet record should be deleted from the database, and the admin should be redirected to the pet list page (pet\_list).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Viewing and Managing Messages:}
+        \begin{itemize}
+        \item \textbf{Test Case 10:} Test if admin users can view a list of messages (messages).
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the messages list page (messages).
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin should be able to view a list of messages sent by customers.
+        \end{itemize}
+        \item \textbf{Test Case 11:} Test if admin users can view details of a specific message (message\_detail).
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the details page of a specific message (message\_detail).
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin should be able to view detailed information about the selected message.
+        \end{itemize}
+        \item \textbf{Test Case 12:} Test deleting a message (message\_delete)
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Navigate to the delete page of an existing message (message\_delete).
+                \item Confirm the deletion.
+            \end{enumerate}
+            \item \textbf{Expected Result:} The selected message should be deleted from the database, and the admin should be redirected to the messages list page (messages).
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Access Control:}
+        \begin{itemize}
+        \item \textbf{Test Case 13:} Test whether non-admin users are redirected away from admin-specific pages.
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as a non-admin user (e.g., a customer).
+                \item Attempt to access admin-specific pages such as pet management or message management.
+            \end{enumerate}
+            \item \textbf{Expected Result:} Non-admin users should be redirected to their respective pages (e.g., user page) and should not be able to access admin-specific functionalities.
+        \end{itemize}
+        \item \textbf{Test Case 14:} Test whether admin-only functionalities are accessible only to users with admin privileges.
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as an admin user.
+                \item Attempt to access admin-only functionalities.
+            \end{enumerate}
+            \item \textbf{Expected Result:} Admin users should have access to admin-only functionalities such as pet management and message management.
+        \end{itemize}
+        \item \textbf{Test Case 15:} Test whether users with customer privileges can access their own pages (user page) but not admin-specific pages.
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Log in as a customer user.
+                \item Attempt to access their own page (user-page) and admin-specific pages.
+            \end{enumerate}
+            \item \textbf{Expected Result:} Customer users should be able to access their own page but should be redirected away from admin-specific functionalities.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Profile Creation:}
+        \begin{itemize}
+        \item \textbf{Test Case 16:} Test whether a customer profile is created upon admin registration.
+        \begin{itemize}
+            \item \textbf{Steps:}
+            \begin{enumerate}
+                \item Register as an admin user.
+                \item Verify if a corresponding customer profile is created in the database.
+            \end{enumerate}
+            \item \textbf{Expected Result:} Upon successful admin registration, a customer profile should be created in the database linked to the admin user.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+

@@ -1,0 +1,42 @@
+\section{Requirement Traceablity Matrix}
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.4}
+% \caption{Requirement Traceability Matrix}
+\begin{tabular}{|c|p{3cm}|p{2cm}|p{6cm}|}
+\hline
+\textbf{S.No} & \textbf{Module Name} & \textbf{Applicable Roles} & \textbf{Description} \\
+\hline
+\multirow{3}{*}{1} & \multirow{3}{=}{Admin Management} & \multirow{3}{=}{Admin} & Admin can register \\
+ &  &  & Admin can login \\
+ &  &  & Admin can manage account \\
+\hline
+\multirow{3}{*}{2} & \multirow{3}{=}{User Account Management} & \multirow{3}{=}{User} & User can register \\
+ &  &  & User can login \\
+ &  &  & User can manage account \\
+\hline
+\multirow{4}{*}{3} & \multirow{4}{=}{Dashboard} & \multirow{3}{=}{Admin} & Admin can view and manage pet records \\
+ &  &  & Admin can view and manage user messages \\
+ &  &  & Admin can add or remove staff \\
+\cline{3-4}
+ &  & \multirow{4}{=}{User}  & User can view and edit personal details \\
+ &  &  & User can view animals and pets at the shelter \\
+ &  &  & User can view shelter information \\
+ &  &  & User can contact customer support \\
+\hline
+\multirow{3}{*}{4} & \multirow{3}{=}{Pet Management} & \multirow{2}{=}{Admin} & Admin can add new pet profiles \\
+ &  &  & Admin can update or edit existing pet profiles \\
+ &  &  & Admin can delete pet profiles \\
+\hline
+\multirow{4}{*}{5} & \multirow{4}{=}{Customer Support Management} & \multirow{2}{=}{Admin} & Admin can view messages left by users \\
+ &  &  & Admin can respond to messages \\
+\cline{3-4}
+ &  & \multirow{2}{=}{User} & User can contact shelter by leaving a message \\
+ &  &  & User can contact shelter through telephone \\
+\hline
+\end{tabular}
+\end{table}
+
+
+

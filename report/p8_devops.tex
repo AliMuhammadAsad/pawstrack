@@ -1,0 +1,249 @@
+\section{DevOps User Stories, and Acceptance Criteria}
+\subsection{Admin Stories}
+\subsubsection*{1. As an Admin, I can make daily updates on pets}
+\textbf{Description:} As an Admin, I want to make day-to-day updates about pets currently being held at the shelter. This can include their daily pictures, wallpapers, their treatment if any, their livelihood, their adoption status, new animals, etc.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item \textbf{Pet Updates:}
+    \begin{itemize}
+        \item Admin can upload one picture per pet profile daily.
+        \item Mandatory fields (name, species, breed, age, gender, ID) are accurately populated and give errors if wrong data types are used for specific fields.
+        \item Treatment information and adoption status are correctly displayed for each pet.
+    \end{itemize}
+    
+    \item \textbf{Livelihood Updates:}
+    \begin{itemize}
+        \item Admin can post updates on pets' general well-being.
+        \item Updates include behavior, interactions, and special needs.
+    \end{itemize}
+    
+    \item \textbf{Adoption Status Updates:}
+    \begin{itemize}
+        \item Admin can update adoption status (available, pending, adopted) for each pet.
+        \item Users can view real-time adoption status changes on pet profiles.
+    \end{itemize}
+    
+    \item \textbf{New Arrivals Updates:}
+    \begin{itemize}
+        \item Admin promptly adds profiles for new animals.
+        \item Correctly captures species, breed, age, and gender for each new arrival.
+        \item Includes at least one picture for each new arrival.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection*{2. As an Admin, I can manage detailed pet records}
+\textbf{Description:} As an Admin, I want the ability to upload and manage detailed records for each pet. This includes uploading images, maintaining a comprehensive medical history, and updating the adoption status. Efficient pet record management ensures accurate information about each animal in the shelter.
+
+\textbf{Acceptance Criteria:}
+    \begin{enumerate}
+    \item There should be an option to add a new pet.
+    \item No record should be created without a pet name.
+    \item No record should be created without specifying the pet type.
+    \item No record should be created without providing pet description, history, and setting an adoption status.
+    \item It should be possible to create a record without uploading a pet image.
+    \item The submit button should successfully create a pet record when clicked.
+    \item Pet records should be editable.
+    \item Pet records should be deletable.
+\end{enumerate}
+
+\subsubsection*{3. As an Admin, I can manage pet treatments}
+\textbf{Description:} As an Admin, I want to upload and manage information about pets currently undergoing treatment. This includes tracking medical bills and expenditures associated with the treatment. Efficient management of treatment records is essential for providing optimal care to the animals.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item Add a pet to the treatment page.
+    \item Add the vet treating the pet to the treatment page.
+    \item Add a description about the treatment.
+    \item Add medication for the treatment.
+    \item Add day-to-day cost for the treatment.
+    \item If the cost is covered, the total cost should be updated accordingly.
+\end{enumerate}
+
+\subsubsection*{4. As an Admin, I can manage adoption status and history}
+\textbf{Description:} As an Admin, I want the capability to update the adoption status of pets and track adoption applications efficiently. This functionality is crucial for managing the adoption process, ensuring transparency, and matching pets with suitable adopters.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item A pet can be added without any adoption history.
+    \item It should be possible to set adoption status for any pet successfully.
+    \item Adoption history can be updated successfully.
+    \item Adoption status and history should be successfully displayed.
+\end{enumerate}
+
+\subsubsection*{5. As an Admin, I can manage inventory stocks}
+\textbf{Description:} As an Admin, I want to manage and view inventory stocks easily. This involves the ability to add, update, or delete stock items as needed. Efficient inventory management ensures the availability of necessary supplies for the shelter's operations.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item Add inventory items.
+    \item Add inventory item details.
+    \item Add inventory item quantity.
+    \item Add inventory item price.
+    \item Add inventory item shelf-life if needed.
+    \item Update inventory item quantity/price as needed.
+    \item Delete an inventory item.
+\end{enumerate}
+
+
+\subsubsection*{6. As an Admin, I can maintain vets and staff information}
+\textbf{Description:} As an Admin, I want to upload and manage information about vets and staff members, including their roles and responsibilities within the shelter. This functionality ensures that the team's details are organized and accessible for efficient collaboration.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item Admin should be allowed to update the vet's information.
+    \item A new vet cannot be left nameless, or without a description or contact information.
+    \item Information about the vet should be displayed correctly.
+\end{enumerate}
+
+\subsubsection*{7. As an Admin, I can manage pet treatments}
+\textbf{Description:} As an Admin, I want to upload and manage information about pets currently undergoing treatment. This includes tracking medical bills and expenditures associated with the treatment. Efficient management of treatment records is essential for providing optimal care to the animals.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item Add a pet to the treatment page.
+    \item Add the vet treating the pet.
+    \item Add a description about the treatment.
+    \item Add medication for the treatment.
+    \item Add day-to-day cost for the treatment.
+    \item If the cost is covered, the total cost should be updated accordingly.
+\end{enumerate}
+
+\subsubsection*{8. As an Admin, I can login to dashboard securely:}
+\textbf{Description:}As an Admin, I want to securely log in to the system to access the admin dashboard and perform various administrative tasks. This includes ensuring that only authorized personnel can access sensitive information and functionalities.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item Admin ID should be unique.
+    \item The system should deny access if the credentials are incorrect.
+    \item The system should allow access if the credentials are correct.
+    \item Try to login with only username, and only password.
+\end{enumerate}
+
+\subsubsection*{9. As an Admin, I can manage donations and sponsorships}
+\textbf{Description:} As an Admin, I want to handle and manage donations and sponsorships for items or specific pets. This involves keeping track of received donations and ensuring transparency in financial transactions related to the shelter's operations.
+
+\textbf{Acceptance Criteria:}
+\begin{enumerate}
+    \item A donor or sponsor should be able to contact via customer support.
+    \item A donation or sponsorship should be logged into the system and linked to the pet or inventory if needed.
+    \item Donor details should be successfully displayed.
+    \item Sponsor details should be successfully displayed.
+    \item Donation amount/sponsorship amount should be updated.
+\end{enumerate}
+
+
+\subsection{User Stories}
+\subsubsection*{1. As a User, I can view adoption candidates} 
+    \textbf{Description:} As a General User, I want to view pets or animals available for adoption and their history, if available, to make informed adoption decisions. 
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+       \item System should successfully display list of pets available for adoption.
+       \item On selecting to view a pet, the adoption status should display if the pet is available or not.
+       \item The adoption history and relevant details about the pet should be displayed.
+    \end{itemize}
+    
+\subsubsection*{2. As a User, I can access customer support} 
+    \textbf{Description:} As a User with an Account, I want to access customer support channels for inquiries or assistance, such as a dedicated help center or information section, so that I can seek help or a clarification whenever needed. 
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+        \item Provide customer service to customers.
+        \item Provide contact information about the team/shelter.
+        \item Working email channel.
+        \item Allow message box on the page.
+        \item User notified when their query is sent.
+    \end{itemize}
+    
+\subsubsection*{3. As a User, I can understand Shelter operations} 
+    \textbf{Description:} As a General User, I want to view information about general pet care, the shelter environment, and relevant information to better understand the shelter’s operations. 
+
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+       \item Provide customer service to customers.
+       \item Provide contact information about the team/shelter.
+       \item Working email channel.
+       \item Allow message box on the page.
+       \item User notified when their query is sent.
+    \end{itemize}
+    
+\subsubsection*{4. As a User, I can login to my account and manage it} 
+    \textbf{Description:} As a user with an account, I want to be able to manage my account details, such as name, password, email, contact number, and track my pets etc. 
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+        \item Authenticate the user's credentials.
+        \item Try logging in with only username, and with only password.
+        \item Forget password button.
+        \item Try logging in with incorrect credentials.
+        \item Update username.
+        \item Update password.
+        \item Update account picture.
+        \item Update further details.
+        \item Update pets.
+        \item View and track pets.
+    \end{itemize}
+    
+\subsubsection*{5. As a User, I can create my account} 
+    
+    \textbf{Description:} As a User with an Account, I want to create my account, including personal information such as email, username, password, so that I can personalize my experience on the platform. 
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+       \item UserID must be unique.
+       \item Authenticate user credentials.
+       \item Try registering with duplicate credentials.
+       \item Try registering with only email, or username, or password.
+       \item Try registering with invalid password.
+       \item Allow access if account created.
+    \end{itemize}
+
+\subsubsection*{6. As a User, I can register and track my pet} 
+     
+    \textbf{Description:} As a User with an Account, I want to register my own pet to the shelter for treatment, track their day-to-day status, and make payments for any associated expenditures, so that I can ensure proper care for my pet. 
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+       \item Allow user to register a pet. \vspace*{-1mm}
+       \item Pet name. \vspace*{-1mm}
+       \item Pet type. \vspace*{-1mm}
+       \item Pet description. \vspace*{-1mm}
+       \item Pet image (optional). \vspace*{-1mm}
+       \item Show pet's status. \vspace*{-1mm}
+       \item Show pet's medical bills, and history. \vspace*{-1mm}
+       \item Allow payment option. \vspace*{-1mm}
+    \end{itemize}
+
+\subsubsection*{7. As a User, I can leave my feedback} 
+    
+    \textbf{Description:} As a User with an Account, I want to leave feedback, reviews, comments, and ratings for the shelter's services and my overall experience, so that I can contribute to improving the shelter's services and share my experience with others. 
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+       \item Allow the user to leave feedback.
+       \item Allow user to give a review and ratings.
+       \item Reviews should be displayed correctly.
+    \end{itemize}
+
+\subsubsection*{8. As a User, I can make adoption requests} 
+    
+    \textbf{Description:} As a General User, I want to make requests for pet adoptions easily through the system, so that I can initiate the adoption process conveniently.
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+      \item Display pets available for adoption.
+      \item Request for adoption form/button available for pet.
+      \item Notify the user if their adoption request has been sent forward.
+      \item Notify user when their request is processed.
+    \end{itemize}
+
+\subsubsection*{9. As a User, I can make donations}     
+    \textbf{Description:} As a User with an Account, I want to make one-time or recurring donations, either general or specific, through a secure payment processing system, so that I can support the shelter financially and contribute to its cause.
+    
+    \textbf{Acceptance Criteria:}
+    \begin{itemize}
+        \item Allow a page where donations can be made via bank or card etc. OTP should be sent to provided contact info.
+        \item Receipt should be generated to \item show payment processed successfully.
+        \item Receipt should not be generated, an error thrown when not processed.
+    \end{itemize}
